@@ -3,7 +3,11 @@ sudo apt update
 sudo apt upgrade
 
 # install basic packages
-sudo apt install git build-essential apt-transport-https curl wget mlocate redis-server mysql-server postgresql postgresql-contrib nginx
+sudo apt install git build-essential apt-transport-https curl wget mlocate redis-server mysql-server postgresql postgresql-contrib nginx openssh-server -y
+
+# setup ssh server
+sudo systemctl enable ssh
+sudo systemctl start ssh
 
 # remove not needed packages
 sudo apt remove gnome-mines gnome-mahjongg gnome-todo gnome-todo-common gnome-sudoku aisleriot firefox
